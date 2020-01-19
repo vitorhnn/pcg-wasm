@@ -3,9 +3,9 @@
 
 // Constants taken from O'Neill's reference C implementation
 // https://github.com/imneme/pcg-c/blob/83252d9c23df9c82ecb42210afed61a7b42402d7/include/pcg_variants.h#L279
-const static uint64_t MULTIPLIER = 6364136223846793005;
+static const uint64_t MULTIPLIER = 6364136223846793005;
 // https://github.com/imneme/pcg-c/blob/83252d9c23df9c82ecb42210afed61a7b42402d7/include/pcg_variants.h#L284
-const static uint64_t INCREMENT = 1442695040888963407;
+static const uint64_t INCREMENT = 2885390081777926815;
 
 struct rand32_ret {
     uint32_t random;
