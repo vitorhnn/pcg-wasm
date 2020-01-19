@@ -1,0 +1,16 @@
+{
+  "name": "pcg-wasm",
+  "version": "0.1.0",
+  "description": "An implementation of the permuted congruential generator PRNG in C, compiled to WebAssembly and exported as a JavaScript package",
+  "main": "dist/random.cjs.js",
+  "module": "dist/random.esm.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-wasm": "^3.0.0",
+    "rollup": "^1.29.0"
+  },
+  "scripts": {
+    "prebuild": "mkdir -p dist",
+    "build": "emcc -Os pcg.c -o dist/pcg.wasm && rollup -c"
+  }
+}
